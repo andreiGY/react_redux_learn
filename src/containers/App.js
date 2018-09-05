@@ -15,11 +15,10 @@ class App extends Component {
     return (
       <div className="app">
         <header className="App-header">
-          <h1 className="App-title">Мой топ фото</h1>
+          <h1 className="my_header">Мой топ фото</h1>
         </header>
-        <User className="user" name={user.name} />
-        <Page className="page" photos={page.photos} year={page.year} setYear={setYearAction} />
-
+        <User name={user.name} />
+        <Page photos={page.photos} year={page.year} setYear={setYearAction} />
       </div>
     );
   }

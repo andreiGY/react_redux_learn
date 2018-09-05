@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../index.css';
 
 export class Page extends React.Component {
 
@@ -11,14 +12,14 @@ export class Page extends React.Component {
         const {year, photos} = this.props;
         return (
             <div>
-                <div>
+                <div className="page">
                     <button className="btn" onClick={this.onBtnClick}>2018</button>
                     <button className="btn" onClick={this.onBtnClick}>2017</button>
                     <button className="btn" onClick={this.onBtnClick}>2016</button>
                     <button className="btn" onClick={this.onBtnClick}>2015</button>
                     <button className="btn" onClick={this.onBtnClick}>2014</button>
                 </div>
-                <p> У тебя {photos.length} фото за {year} год</p>
+                <p className="my_desc"> У тебя {photos.length} фото за {year} год</p>
             </div>
         )
     }
