@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {User} from '../components/User';
 import {Page} from '../components/Page';
-import logo from './logo.svg';
+import {setYear} from '../actions/PageActions';
+import logo from '../logo.svg';
 import './App.css';
 
 
 class App extends Component {
   render() {
-    const {user, page} = this.props;
+    const {user, page, setYearAction} = this.props;
 
     return (
       <div className="App">
@@ -17,7 +18,7 @@ class App extends Component {
           <h1 className="App-title">Мой топ фото</h1>
         </header>
         <User name={user.name} />
-        <Page photos={page.photos} year={page.year} />
+        <Page photos={page.photos} year={page.year} setYear={setYearAction} />
 
       </div>
     );
@@ -32,5 +33,11 @@ const mapStateToProps = store => {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    setYearAction: year => dispatch(setYear(year), [1])
+  }
+}
 
-export default connect (mapStateToProps) (App);
+
+export default connect (mapStateToProps, mapDispatchToProps) (App);
