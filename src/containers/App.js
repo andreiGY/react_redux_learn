@@ -3,8 +3,9 @@ import {connect} from 'react-redux';
 import {User} from '../components/User';
 import {Page} from '../components/Page';
 import {setYear} from '../actions/PageActions';
-import logo from '../logo.svg';
-import './App.css';
+//import logo from '../logo.svg';
+//import './App.css';
+import '../index.css'
 
 
 class App extends Component {
@@ -12,18 +13,18 @@ class App extends Component {
     const {user, page, setYearAction} = this.props;
 
     return (
-      <div className="App">
+      <div className="app">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Мой топ фото</h1>
         </header>
-        <User name={user.name} />
-        <Page photos={page.photos} year={page.year} setYear={setYearAction} />
+        <User className="user" name={user.name} />
+        <Page className="page" photos={page.photos} year={page.year} setYear={setYearAction} />
 
       </div>
     );
   }
 }
+//           <img src={logo} className="App-logo" alt="logo" /> 
 
 const mapStateToProps = store => {
   //console.log(store);

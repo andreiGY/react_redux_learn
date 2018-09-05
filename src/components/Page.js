@@ -12,11 +12,11 @@ export class Page extends React.Component {
         return (
             <div>
                 <div>
-                    <button onClick={this.onBtnClick}>2018</button>
-                    <button onClick={this.onBtnClick}>2017</button>
-                    <button onClick={this.onBtnClick}>2016</button>
-                    <button onClick={this.onBtnClick}>2015</button>
-                    <button onClick={this.onBtnClick}>2014</button>
+                    <button className="btn" onClick={this.onBtnClick}>2018</button>
+                    <button className="btn" onClick={this.onBtnClick}>2017</button>
+                    <button className="btn" onClick={this.onBtnClick}>2016</button>
+                    <button className="btn" onClick={this.onBtnClick}>2015</button>
+                    <button className="btn" onClick={this.onBtnClick}>2014</button>
                 </div>
                 <p> У тебя {photos.length} фото за {year} год</p>
             </div>
